@@ -31,7 +31,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
 
-  background-color: #ffb835;
+  background-color: #4DD0E1;
 }
 
 .flex-calendar .month .arrow,
@@ -85,6 +85,7 @@
   opacity:0;
   visibility: hidden;
   cursor: default;
+  display: block!important;
 }
 .flex-calendar .week,
 .flex-calendar .days {
@@ -104,7 +105,7 @@
 }
 
 .flex-calendar .week {
-  background-color: #faac1c;
+  background-color: #4DD0E1;
 }
 
 .flex-calendar .week .day,
@@ -142,6 +143,8 @@
   border: 1px solid;
 }
 
+.flex-calendar .days .day.disabled,
+.flex-calendar .days .day.available,
 .flex-calendar .days .day.selected {
   display: -webkit-box;
   display: -webkit-flex;
@@ -168,10 +171,26 @@
           align-items: center;
 }
 
+.flex-calendar .days .day.disabled .number {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  line-height: 40px;
+}
+
+.flex-calendar .days .day.available .number {
+  width: 40px;
+  height: 40px;
+  background-color: #4DD0E1;
+  border-radius: 100%;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+
 .flex-calendar .days .day.selected .number {
   width: 40px;
   height: 40px;
-  background-color: #FFB835;
+  background-color: #E91E63;
   border-radius: 100%;
   line-height: 40px;
   color: #FFFFFF;
